@@ -4419,3 +4419,882 @@ Processing by DashboardController#index as HTML
 Completed 200 OK in 48ms (Views: 44.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-12-28 05:12:38 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 71ms (Views: 66.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/2/edit" for 127.0.0.1 at 2018-12-28 05:13:09 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (5.3ms)
+  Rendered users/edit.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 51ms (Views: 43.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-12-28 05:13:27 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+rack (2.0.6) lib/rack/handler/webrick.rb:86:in `service'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (87.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar NOT NULL, "crypted_password" varchar, "salt" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (82.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/schema.rb:15
+  [1m[35m (81.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (63.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20181228075002)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (82.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-12-28 08:14:14.950203"], ["updated_at", "2018-12-28 08:14:14.950203"]]
+  ↳ db/schema.rb:13
+  [1m[35m (71.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (83.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar NOT NULL, "crypted_password" varchar, "salt" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (80.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/schema.rb:15
+  [1m[35m (82.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (63.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20181228075002)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (93.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-12-28 08:14:15.455195"], ["updated_at", "2018-12-28 08:14:15.455195"]]
+  ↳ db/schema.rb:13
+  [1m[35m (92.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Update (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2018-12-28 08:14:15.554515"], ["key", "environment"]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (82.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+Started GET "/login" for 127.0.0.1 at 2018-12-28 05:14:35 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (1.3ms)
+  Rendered user_sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 254ms (Views: 240.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2018-12-28 05:14:45 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"li+ReJnN4l2YeYSTm/BHsdQS31d26f9qd2W9xdprXclizSkGHzXQDl/ZnKSG39UZFAn1DzBok5GwUh0ljlf0kA==", "email"=>"super", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = 'super' ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_sessions_controller.rb:7
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (2.9ms)
+  Rendered user_sessions/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 56ms (Views: 48.5ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2018-12-28 05:14:48 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QKCR0DxSLUT+3ZB8Lssz3t4Ae5yC2LTJzoC23HWwKzu0QimuuqofFzl9iEsz5KF2HhtRxMRZ2DIJtxY8IYyCYg==", "email"=>"super", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = 'super' ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_sessions_controller.rb:7
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (3.6ms)
+  Rendered user_sessions/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 76ms (Views: 67.3ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2018-12-28 05:15:00 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tihqu7neraQkbFRymFxXNfcyAbBvTQ09uI4CGGAklHhCytLFPyaf9+PMTEWFc8WdNykr6CnMYcZ/uaL4NBg9IQ==", "email"=>"nestor.benavidez@gmail.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = 'nestor.benavidez@gmail.com' ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_sessions_controller.rb:7
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (3.2ms)
+  Rendered user_sessions/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 53ms (Views: 47.9ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "nestor.benavidez@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "nestor.benavidez@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "crypted_password", "salt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "nestor.benavidez@gmail.com"], ["crypted_password", "$2a$10$MGXJEa0WpcVWUbMJ14scyexaODXW7DHWppgbnrxI6wl.VKCNDSFby"], ["salt", "ycthHuUtpFp-s2CPHy55"], ["created_at", "2018-12-28 08:16:51.008606"], ["updated_at", "2018-12-28 08:16:51.008606"]]
+  [1m[35m (839.6ms)[0m  [1m[36mcommit transaction[0m
+Started POST "/user_sessions" for 127.0.0.1 at 2018-12-28 05:17:12 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rDToaDZ5zC6Ke+9Cm52nfepJ4WPB+ZkXvzL42u1D/kdY1lAWsIH+fU3b93WGsjXVKlLLO4d49ex4BVg6uX9XHg==", "email"=>"nestor.benavidez@gmail.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = 'nestor.benavidez@gmail.com' ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_sessions_controller.rb:7
+Redirected to http://localhost:3000/dashboard/index
+Completed 302 Found in 167ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:17:12 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:27:43 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 500 Internal Server Error in 85ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `show_user_path' for #<#<Class:0x00007f33dde692a0>:0x00007f33dc6a2fb8>
+Did you mean?  new_user_path):
+    52:                                 <ul class="dropdown-menu">
+    53:                                     <li class="divider"></li>
+    54:                                     <% if current_user %>
+    55:                                          <li><%= link_to "Mis datos", show_user_path(current_user.id) %></li>
+    56:                                          <li><%= link_to "Editar mi cuenta", edit_user_path(current_user.id) %></li>
+    57:                                          <li><%= link_to "Salir", :logout, method: :post %></li>
+    58:                                        <% end %>
+  
+app/views/layouts/application.html.erb:55:in `_app_views_layouts_application_html_erb__2801829582334352200_69930372262440'
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:28:57 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-12-28 05:29:06 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 71ms (Views: 62.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-12-28 05:29:13 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (3.0ms)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 93ms (Views: 86.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-12-28 05:29:17 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (23.2ms)
+  Rendered users/edit.html.erb within layouts/application (25.3ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 60ms (Views: 56.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/activity.html" for 127.0.0.1 at 2018-12-28 05:29:20 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/activity.html"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+rack (2.0.6) lib/rack/handler/webrick.rb:86:in `service'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-12-28 05:29:21 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (9.4ms)
+  Rendered users/edit.html.erb within layouts/application (15.2ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 65ms (Views: 55.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:29:23 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 40ms (Views: 37.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:31:14 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 33ms (Views: 30.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:31:17 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 64ms (Views: 60.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:31:20 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 80ms (Views: 75.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:31:20 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 110ms (Views: 105.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:31:21 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 91ms (Views: 88.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:31:30 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 74ms (Views: 70.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:31:34 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 61ms (Views: 58.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:31:35 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 68ms (Views: 64.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:31:35 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 47ms (Views: 45.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:31:35 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (5.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 84ms (Views: 80.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:31:36 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 59ms (Views: 49.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:31:37 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 34ms (Views: 32.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:31:37 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 63ms (Views: 59.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:31:38 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 49ms (Views: 45.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:32:12 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 102ms (Views: 98.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:33:27 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 75ms (Views: 70.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:35:38 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:92: syntax error, unexpected '<'
+...ut_buffer.append=( link_to "#{<i class="menu-icon icon-signo...
+...                              ^
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:92: syntax error, unexpected '<'
+...lass="menu-icon icon-signout"></i>}Salir", :logout, method: ...
+...                              ^
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:92: unknown regexp option - l
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:92: unmatched close parenthesis: /i>}Salir", :logout, method: :post );@output_buffer.safe_append='</i
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:93: syntax error, unexpected '<'
+                            </ul>
+                            ^
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:94: unknown regexp options - dv
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:95: syntax error, unexpected '<'
+                        <!--/.sidebar-->
+                        ^
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:96: unknown regexp options - dv
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:97: syntax error, unexpected '<'
+                    <!--/.span3-->
+                    ^
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:99: unknown regexp options - dv
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:100: syntax error, unexpected '<'
+            </div>
+            ^
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:101: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+            <!--/.container-->
+                              ^
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:103: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+        <!--/.wrapper-->
+                        ^
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:105: syntax error, unexpected '<'
+            <div class="container">
+            ^
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:106: syntax error, unexpected '<'
+                <b class="copyright">&copy; 20...
+                ^
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:106: syntax error, unexpected &
+...         <b class="copyright">&copy; 2018 Sajonia Coffee </b...
+...                              ^
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:106: syntax error, unexpected tCONSTANT, expecting tSTRING_DEND
+..."copyright">&copy; 2018 Sajonia Coffee </b>Todos los derecho...
+...                        ^~~~~~~
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:107: unknown regexp options - dv
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:108: syntax error, unexpected '<'
+        </div>
+        ^
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:109: unknown regexp options - crpt
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:109: unexpected fraction part after numeric literal
+...script src="/scripts/jquery-1.9.1.min.js" type="text/javascr...
+...                            ^~~
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:109: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+... src="/scripts/jquery-1.9.1.min.js" type="text/javascript"><...
+...                            ^~~
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:109: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+...jquery-1.9.1.min.js" type="text/javascript"></script>
+...                           ^~~~
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:109: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+....min.js" type="text/javascript"></script>
+...                              ^
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:110: unexpected fraction part after numeric literal
+...pt src="/scripts/jquery-ui-1.10.1.custom.min.js" type="text/...
+...                           ^~~~
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:110: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+...scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascrip...
+...                         ^~~~~~
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:110: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+....10.1.custom.min.js" type="text/javascript"></script>
+...                           ^~~~
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:110: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+....min.js" type="text/javascript"></script>
+...                              ^
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:111: syntax error, unexpected tSTRING_BEG, expecting tSTRING_DEND
+.../bootstrap/js/bootstrap.min.js" type="text/javascript"></scr...
+...                              ^
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:111: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+...js/bootstrap.min.js" type="text/javascript"></script>
+...                           ^~~~
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:111: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+....min.js" type="text/javascript"></script>
+...                              ^
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:112: syntax error, unexpected tSTRING_BEG, expecting tSTRING_DEND
+...="/scripts/flot/jquery.flot.js" type="text/javascript"></scr...
+...                              ^
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:112: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+...flot/jquery.flot.js" type="text/javascript"></script>
+...                           ^~~~
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:112: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...flot.js" type="text/javascript"></script>
+...                              ^
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:113: syntax error, unexpected tSTRING_BEG, expecting tSTRING_DEND
+...pts/flot/jquery.flot.resize.js" type="text/javascript"></scr...
+...                              ^
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:113: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+...uery.flot.resize.js" type="text/javascript"></script>
+...                           ^~~~
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:113: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...size.js" type="text/javascript"></script>
+...                              ^
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:114: syntax error, unexpected tSTRING_BEG, expecting tSTRING_DEND
+...atatables/jquery.dataTables.js" type="text/javascript"></scr...
+...                              ^
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:114: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+...query.dataTables.js" type="text/javascript"></script>
+...                           ^~~~
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:114: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...bles.js" type="text/javascript"></script>
+...                              ^
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:115: syntax error, unexpected tSTRING_BEG, expecting tSTRING_DEND
+...script src="/scripts/common.js" type="text/javascript"></scr...
+...                              ^
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:115: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+..."/scripts/common.js" type="text/javascript"></script>
+...                           ^~~~
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:115: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...mmon.js" type="text/javascript"></script>
+...                              ^
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:123: unterminated string meets end of file
+          end
+             ^
+/home/nestor/Documents/sajonia-core/app/views/layouts/application.html.erb:123: syntax error, unexpected end-of-input, expecting tSTRING_DEND
+          end
+             ^):
+  
+app/views/layouts/application.html.erb:92: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:92: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:92: unknown regexp option - l
+app/views/layouts/application.html.erb:92: unmatched close parenthesis: /i>}Salir", :logout, method: :post );@output_buffer.safe_append='</i
+app/views/layouts/application.html.erb:93: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:94: unknown regexp options - dv
+app/views/layouts/application.html.erb:95: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:96: unknown regexp options - dv
+app/views/layouts/application.html.erb:97: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:99: unknown regexp options - dv
+app/views/layouts/application.html.erb:100: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:101: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+app/views/layouts/application.html.erb:103: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+app/views/layouts/application.html.erb:105: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:106: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:106: syntax error, unexpected &
+app/views/layouts/application.html.erb:106: syntax error, unexpected tCONSTANT, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:107: unknown regexp options - dv
+app/views/layouts/application.html.erb:108: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:109: unknown regexp options - crpt
+app/views/layouts/application.html.erb:109: unexpected fraction part after numeric literal
+app/views/layouts/application.html.erb:109: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:109: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:109: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+app/views/layouts/application.html.erb:110: unexpected fraction part after numeric literal
+app/views/layouts/application.html.erb:110: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:110: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:110: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+app/views/layouts/application.html.erb:111: syntax error, unexpected tSTRING_BEG, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:111: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:111: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+app/views/layouts/application.html.erb:112: syntax error, unexpected tSTRING_BEG, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:112: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:112: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+app/views/layouts/application.html.erb:113: syntax error, unexpected tSTRING_BEG, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:113: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:113: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+app/views/layouts/application.html.erb:114: syntax error, unexpected tSTRING_BEG, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:114: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:114: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+app/views/layouts/application.html.erb:115: syntax error, unexpected tSTRING_BEG, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:115: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.erb:115: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+app/views/layouts/application.html.erb:123: unterminated string meets end of file
+app/views/layouts/application.html.erb:123: syntax error, unexpected end-of-input, expecting tSTRING_DEND
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:36:25 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 81ms (Views: 77.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:37:07 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 84ms (Views: 79.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:37:09 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 83ms (Views: 78.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:37:12 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 51ms (Views: 48.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:37:12 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 58ms (Views: 54.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:37:12 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 80ms (Views: 76.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:37:12 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 47ms (Views: 44.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:37:13 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 63ms (Views: 58.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:37:13 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (3.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 60ms (Views: 57.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:37:13 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 60ms (Views: 56.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:37:15 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 38ms (Views: 35.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/logout" for 127.0.0.1 at 2018-12-28 05:37:20 -0300
+Processing by UserSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QgBCxHNqqHrjkcf1TsruPzLTbNxoD1XTNQvVHa6gN5m24vq69ZKaKSQx38JT5XyX8shGhC6OOSjyPHX9+pyewA=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_sessions_controller.rb:18
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-12-28 05:37:20 -0300
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (0.8ms)
+  Rendered user_sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-12-28 05:37:23 -0300
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (3.0ms)
+  Rendered user_sessions/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 64ms (Views: 60.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2018-12-28 05:37:38 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KSLkAQfqH4SBW+nXbxqBUuh1tgFqNdytdHn7q6/q40UATEZklSMYPs5AiGhjnoeruBJpptx8cKA7Gqm1R/dE3w==", "email"=>"nestor.benavidez@gmail.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = 'nestor.benavidez@gmail.com' ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_sessions_controller.rb:7
+Redirected to http://localhost:3000/dashboard/index
+Completed 302 Found in 170ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:37:38 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:39:38 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 109ms (Views: 106.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dashboard/task.html" for 127.0.0.1 at 2018-12-28 05:39:43 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/dashboard/task.html"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+rack (2.0.6) lib/rack/handler/webrick.rb:86:in `service'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:39:45 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 30ms (Views: 27.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:56:43 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 70ms (Views: 65.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:56:50 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 85ms (Views: 81.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dashboard/message.html" for 127.0.0.1 at 2018-12-28 05:56:55 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/dashboard/message.html"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+rack (2.0.6) lib/rack/handler/webrick.rb:86:in `service'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:56:57 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:54
+Completed 200 OK in 59ms (Views: 54.9ms | ActiveRecord: 0.2ms)
+
+

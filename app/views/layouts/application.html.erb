@@ -50,11 +50,12 @@
                                 <img src="/images/user.png" class="nav-avatar" />
                                 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Mis datos</a></li>
-                                    <li><a href="#">Editar mi cuenta</a></li>
-                                    <li><a href="#">Otras herramientas</a></li>
                                     <li class="divider"></li>
-                                    <li><a href="#">Salir</a></li>
+                                    <% if current_user %>
+                                         <li><%= link_to "Mis datos", user_path(current_user.id) %></li>
+                                         <li><%= link_to "Editar mi cuenta", edit_user_path(current_user.id) %></li>
+                                         <li><%= link_to "Salir", :logout, method: :post %></li>
+                                       <% end %>
                                 </ul>
                             </li>
                         </ul>
@@ -87,7 +88,7 @@
                                         <li><a href="other-user-listing.html"><i class="icon-inbox"></i>All Users </a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#"><i class="menu-icon icon-signout"></i>Salir </a></li>
+                                <li><a href="<% logout_url %>"><i class="menu-icon icon-signout"></i>Salir </a></li>
                             </ul>
                         </div>
                         <!--/.sidebar-->
