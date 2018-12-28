@@ -7,23 +7,23 @@
 							<h3>Ingresar credenciales</h3>
 						</div>
 
-            <% end %>
+
 						<div class="module-body">
 							<div class="control-group">
 								<div class="controls row-fluid">
-                  <%= text_field_tag :email, :class => "span12", :id => "inputEmail", :placeholder => "Correo electronico"   %>
+                  <%= text_field_tag :email %>
 								</div>
 							</div>
 							<div class="control-group">
 								<div class="controls row-fluid">
-                  <%= password_field_tag :password, :class => "span12", :id => "inputPassword", :placeholder => "Clave"   %>
+                  <%= password_field_tag :password   %>
 								</div>
 							</div>
 						</div>
 						<div class="module-foot">
 							<div class="control-group">
 								<div class="controls clearfix">
-                  <%= submit_tag "Login",, :class => "btn btn-primary pull-right" %>
+                  <%= submit_tag "Login", :class => "btn btn-primary pull-right" %>
 								</div>
 							</div>
 						</div>
