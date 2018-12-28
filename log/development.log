@@ -4033,3 +4033,389 @@ Migrating to SorceryCore (20181228075002)
   ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+Started GET "/users" for 127.0.0.1 at 2018-12-28 04:56:18 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 372ms (Views: 366.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-12-28 04:56:19 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+rack (2.0.6) lib/rack/handler/webrick.rb:86:in `service'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+Started GET "/users/new" for 127.0.0.1 at 2018-12-28 04:56:21 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (124.0ms)
+  Rendered users/new.html.erb within layouts/application (127.1ms)
+Completed 500 Internal Server Error in 157ms (ActiveRecord: 2.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x00007efbe4a26188>:0x00007efbe40c4130>):
+    17:   </div>
+    18: 
+    19:   <div class="field">
+    20:    <%= f.label :password %><br />
+    21:    <%= f.password_field :password %>
+    22:   </div>
+    23:   <div class="field">
+  
+app/views/users/_form.html.erb:20:in `block in _app_views_users__form_html_erb___2692708756902933161_69810163909420'
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb___2692708756902933161_69810163909420'
+app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb__3995071454410706447_69810163951200'
+Started GET "/users/new" for 127.0.0.1 at 2018-12-28 04:56:59 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (39.5ms)
+  Rendered users/new.html.erb within layouts/application (43.2ms)
+Completed 200 OK in 85ms (Views: 81.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-28 04:57:28 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0fyuVI3liDwP0NofrugYGbGy8Oa6BiOTyt4ZStBGKWiBr5l9CorVjUU/32eARXS0teF21eld4qVvEJLmoWIWIw==", "user"=>{"email"=>"nestor.benavidez@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "nestor.benavidez@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "crypted_password", "salt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "nestor.benavidez@gmail.com"], ["crypted_password", "$2a$10$.xD1gFy8FsVsmGHW/J.2ce.iHPMe7jTOys8ah7NwvFbxgcMG1UNyq"], ["salt", "r8S1ZcCnMizhgXhxxhsx"], ["created_at", "2018-12-28 07:57:28.867045"], ["updated_at", "2018-12-28 07:57:28.867045"]]
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (68.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+Redirected to http://0.0.0.0:3000/users/1
+Completed 302 Found in 159ms (ActiveRecord: 70.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-12-28 04:57:28 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 28ms (Views: 24.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-12-28 04:57:38 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (10.6ms)
+  Rendered users/edit.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 75ms (Views: 71.1ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/users/1" for 127.0.0.1 at 2018-12-28 04:57:46 -0300
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Mp1dQByOJ2WkLUOg6Xh6fWhK8N5mpUxa4Mi1dME++OPBbXHc5S2HdsU9vHKZJIUT2qCt3fd/ftnBMTfgYLGuVg==", "user"=>{"email"=>"nestor.benavidez@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:44
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "nestor.benavidez@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "salt" = ?, "crypted_password" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["salt", "yS3J4jGodGcLXoEPGXz_"], ["crypted_password", "$2a$10$e.uu/N7l2eikiTsPb4YOneiK1pMONhXiQVXdDkMAaSCeEz9Ilazuu"], ["updated_at", "2018-12-28 07:57:47.112474"], ["id", 1]]
+  ↳ app/controllers/users_controller.rb:44
+  [1m[35m (160.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:44
+Redirected to http://0.0.0.0:3000/users/1
+Completed 302 Found in 274ms (ActiveRecord: 161.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-12-28 04:57:47 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 74ms (Views: 68.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-12-28 04:57:50 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 44ms (Views: 41.2ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/1" for 127.0.0.1 at 2018-12-28 04:58:06 -0300
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yL8+Y2izPCOF06XipwNmxWwGCL4x0cHHLvMLgfU37qCY7AlK79xhks88oJqJrgpoaFWOjWKKAPGLPYAthBPR6w==", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:57
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/users_controller.rb:57
+  [1m[35m (166.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:57
+Redirected to http://0.0.0.0:3000/users
+Completed 302 Found in 178ms (ActiveRecord: 167.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-12-28 04:58:06 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 51ms (Views: 46.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-12-28 04:58:08 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (6.4ms)
+  Rendered users/new.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 44ms (Views: 41.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-28 04:58:14 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FpeoMBWzsTcRhiR2NH6x8DO9nM4Azz6RRBGKnT3xPuW92ag6ZMSAmPX3jN7XUP7iiIAgZHSEEWluCeWmSfeDrQ==", "user"=>{"email"=>"nestor.benavidez@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "nestor.benavidez@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:30
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "crypted_password", "salt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "nestor.benavidez@gmail.com"], ["crypted_password", "$2a$10$GHPy24fjUVOIVnFTt8.XKu.4cpW17T.ReWBlh6WPvY27UJUtDjxda"], ["salt", "ddVpBJgT9LquAGU_7fXs"], ["created_at", "2018-12-28 07:58:14.385813"], ["updated_at", "2018-12-28 07:58:14.385813"]]
+  ↳ app/controllers/users_controller.rb:30
+  [1m[35m (71.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:30
+Redirected to http://0.0.0.0:3000/users/2
+Completed 302 Found in 204ms (ActiveRecord: 72.7ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-12-28 04:58:14 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 75ms (Views: 68.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-12-28 04:58:18 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 79ms (Views: 76.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-12-28 04:58:20 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 65ms (Views: 61.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-12-28 04:58:21 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 93ms (Views: 89.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-12-28 04:58:23 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 88ms (Views: 82.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-12-28 04:58:29 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 48ms (Views: 43.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-12-28 04:58:38 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 33ms (Views: 30.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-12-28 04:58:40 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 38ms (Views: 34.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-12-28 04:58:40 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 77ms (Views: 72.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-12-28 04:58:41 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 93ms (Views: 89.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-12-28 04:58:42 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 64ms (Views: 54.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-12-28 04:58:42 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 63ms (Views: 59.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-28 04:58:46 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 36ms (Views: 34.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-12-28 04:59:58 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 35ms (Views: 32.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:00:00 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 72ms (Views: 69.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:01:10 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 103ms (Views: 100.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-28 05:02:05 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 109ms (Views: 104.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-28 05:02:47 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 115ms (Views: 111.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-28 05:03:15 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 96ms (Views: 92.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index.html" for 127.0.0.1 at 2018-12-28 05:03:37 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/index.html"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+rack (2.0.6) lib/rack/handler/webrick.rb:86:in `service'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+Started GET "/dashboard/index" for 127.0.0.1 at 2018-12-28 05:04:00 -0300
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 48ms (Views: 44.7ms | ActiveRecord: 0.0ms)
+
+
