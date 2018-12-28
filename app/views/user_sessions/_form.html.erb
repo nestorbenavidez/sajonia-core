@@ -1,13 +1,34 @@
-<%= form_tag user_sessions_path, :method => :post do %>
-  <div class="field">
-    <%= label_tag :email %><br />
-    <%= text_field_tag :email %>
-  </div>
-  <div class="field">
-    <%= label_tag :password %><br />
-    <%= password_field_tag :password %>
-  </div>
-  <div class="actions">
-    <%= submit_tag "Login" %>
-  </div>
-<% end %>
+	<div class="wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="module module-login span4 offset4">
+          <%= form_tag user_sessions_path, :class => "form-vertical" ,:method => :post do %>
+						<div class="module-head">
+							<h3>Ingresar credenciales</h3>
+						</div>
+
+            <% end %>
+						<div class="module-body">
+							<div class="control-group">
+								<div class="controls row-fluid">
+                  <%= text_field_tag :email, :class => "span12", :id => "inputEmail", :placeholder => "Correo electronico"   %>
+								</div>
+							</div>
+							<div class="control-group">
+								<div class="controls row-fluid">
+                  <%= password_field_tag :password, :class => "span12", :id => "inputPassword", :placeholder => "Clave"   %>
+								</div>
+							</div>
+						</div>
+						<div class="module-foot">
+							<div class="control-group">
+								<div class="controls clearfix">
+                  <%= submit_tag "Login",, :class => "btn btn-primary pull-right" %>
+								</div>
+							</div>
+						</div>
+				  <% end %>
+				</div>
+			</div>
+		</div>
+	</div><!--/.wrapper-->
