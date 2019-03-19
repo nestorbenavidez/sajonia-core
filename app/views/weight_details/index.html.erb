@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Weight Details</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Reception point</th>
+      <th>Reception status</th>
+      <th>Harvest</th>
+      <th>Client</th>
+      <th>Reception date</th>
+      <th>Type of vehicle</th>
+      <th>Plate</th>
+      <th>Driver</th>
+      <th>Remission number</th>
+      <th>Procedence</th>
+      <th>Receipt</th>
+      <th>Waste in transit</th>
+      <th>Pledgee</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @weight_details.each do |weight_detail| %>
+      <tr>
+        <td><%= weight_detail.reception_point %></td>
+        <td><%= weight_detail.reception_status %></td>
+        <td><%= weight_detail.harvest %></td>
+        <td><%= weight_detail.client %></td>
+        <td><%= weight_detail.reception_date %></td>
+        <td><%= weight_detail.type_of_vehicle %></td>
+        <td><%= weight_detail.plate %></td>
+        <td><%= weight_detail.driver %></td>
+        <td><%= weight_detail.remission_number %></td>
+        <td><%= weight_detail.procedence %></td>
+        <td><%= weight_detail.receipt %></td>
+        <td><%= weight_detail.waste_in_transit %></td>
+        <td><%= weight_detail.pledgee %></td>
+        <td><%= link_to 'Show', weight_detail %></td>
+        <td><%= link_to 'Edit', edit_weight_detail_path(weight_detail) %></td>
+        <td><%= link_to 'Destroy', weight_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Weight Detail', new_weight_detail_path %>

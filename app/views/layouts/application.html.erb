@@ -73,8 +73,16 @@
                         <div class="sidebar">
                             <ul class="widget widget-menu unstyled">
                                 <li class="active"><a href="/dashboard/index"><i class="menu-icon icon-dashboard"></i>Dashboard</a></li>
-                                <li><a href="activity.html"><i class="menu-icon icon-bullhorn"></i>Modulo de Acopio <b class="label green pull-right">IMP</b></a></li>
-                                <li><a href="message.html"><i class="menu-icon icon-inbox"></i>Modulo de Beneficio <b class="label orange pull-right">PLA</b></a></li>
+                                <li><a class="collapsed" data-toggle="collapse" href="#togglePages"><i class="menu-icon icon-bullhorn">
+                                </i><i class="icon-chevron-down pull-right"></i><i class="icon-chevron-up pull-right">
+                                </i>Modulo de Beneficio</a>
+                                    <ul id="togglePages" class="collapse unstyled">
+                                        <li><a href="other-login.html"><i class="icon-inbox"></i>Detalle de Peso</a></li>
+                                        <li><a href="other-user-profile.html"><i class="icon-inbox"></i>Profile </a></li>
+                                        <li><a href="other-user-listing.html"><i class="icon-inbox"></i>All Users </a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="message.html"><i class="menu-icon icon-inbox"></i>Modulo de Acopio <b class="label orange pull-right">PLA</b></a></li>
                                 <li><a href="task.html"><i class="menu-icon icon-tasks"></i>Modulo 3</a></li>
                             </ul>
                             <!--/.widget-nav-->

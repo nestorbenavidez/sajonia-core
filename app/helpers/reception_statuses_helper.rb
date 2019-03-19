@@ -1,0 +1,2 @@
+module ReceptionStatusesHelper
+end

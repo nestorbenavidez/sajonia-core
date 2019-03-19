@@ -1,0 +1,2 @@
+module WeightDetailsHelper
+end

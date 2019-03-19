@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  reception_point: 
+  reception_status: 
+  harvest: MyString
+  client: 
+  reception_date: 
+  type_of_vehicle: 
+  plate: MyString
+  driver: 
+  remission_number: MyString
+  procedence: MyString
+  receipt: MyString
+  waste_in_transit: MyString
+  pledgee: MyString
+
+two:
+  reception_point: 
+  reception_status: 
+  harvest: MyString
+  client: 
+  reception_date: 
+  type_of_vehicle: 
+  plate: MyString
+  driver: 
+  remission_number: MyString
+  procedence: MyString
+  receipt: MyString
+  waste_in_transit: MyString
+  pledgee: MyString

@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Reception Statuses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reception_statuses.each do |reception_status| %>
+      <tr>
+        <td><%= reception_status.name %></td>
+        <td><%= link_to 'Show', reception_status %></td>
+        <td><%= link_to 'Edit', edit_reception_status_path(reception_status) %></td>
+        <td><%= link_to 'Destroy', reception_status, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Reception Status', new_reception_status_path %>

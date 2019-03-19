@@ -7711,3 +7711,874 @@ Processing by UserSessionsController#create as HTML
 Completed 200 OK in 39ms (Views: 12.7ms | ActiveRecord: 18.7ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-01-19 10:05:19 -0300
+  [1m[35m (186.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/login
+  Rendered user_sessions/_form.html.erb (1.3ms)
+  Rendered user_sessions/new.html.erb within layouts/login (8.1ms)
+Completed 200 OK in 172ms (Views: 42.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2019-01-19 10:05:22 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+rack (2.0.6) lib/rack/handler/webrick.rb:86:in `service'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/user_sessions" for 127.0.0.1 at 2019-01-19 10:06:04 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZS5Y6q53yStlVgsYnwwmNZn6pV3nrJWq9kfDzeAttQl6c0CoS7jIZn8H4B5cj67d+PPvo3uIOw5HeAaur1/AVA==", "email"=>"nestor.benavidez@gmail.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = 'nestor.benavidez@gmail.com' ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_sessions_controller.rb:11
+  Rendering user_sessions/new.html.erb within layouts/login
+  Rendered user_sessions/_form.html.erb (1.0ms)
+  Rendered user_sessions/new.html.erb within layouts/login (2.0ms)
+Completed 200 OK in 204ms (Views: 3.8ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2019-01-19 10:06:15 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BjCzi0Cmoj0M7wKqSrgvpU8jUf+2F2siStiy7co2vv4ZbavJpWmjcBa+6ayJO6dNLiobASozxYb753eOhUTLow==", "email"=>"nestorbenavidez@gmail.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = 'nestorbenavidez@gmail.com' ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_sessions_controller.rb:11
+  Rendering user_sessions/new.html.erb within layouts/login
+  Rendered user_sessions/_form.html.erb (2.2ms)
+  Rendered user_sessions/new.html.erb within layouts/login (4.9ms)
+Completed 200 OK in 15ms (Views: 10.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2019-01-19 10:06:30 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bl+y5xXf/K80yg2phHOucwFSxdq63tuEegcV3aggXmMZAqql8BD94i6b5q9H8CabYFuPJCb6dSDLONC+51IrPg==", "email"=>"nestor.benavidez@gmail.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = 'nestor.benavidez@gmail.com' ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_sessions_controller.rb:11
+  Rendering user_sessions/new.html.erb within layouts/login
+  Rendered user_sessions/_form.html.erb (1.3ms)
+  Rendered user_sessions/new.html.erb within layouts/login (2.1ms)
+Completed 200 OK in 167ms (Views: 3.5ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started POST "/user_sessions" for 127.0.0.1 at 2019-01-19 10:07:20 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vG/Kg80O9AAy0qS0iZU7+raGB7Vt1PqUmUs95AAQ6SSjMtLBKMH1TSiDT7JKFrMS149NS/HwVDAodPiHT2KceQ==", "email"=>"nestor.benavidez@gmail.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = 'nestor.benavidez@gmail.com' ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_sessions_controller.rb:11
+  Rendering user_sessions/new.html.erb within layouts/login
+  Rendered user_sessions/_form.html.erb (0.7ms)
+  Rendered user_sessions/new.html.erb within layouts/login (1.4ms)
+Completed 200 OK in 166ms (Views: 2.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2019-01-19 10:07:41 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z0fy4C7+oj12htp+XG05Hwh8qtAPBaH+gdBUst2WuTN4GuqiyzGjcGzXMXif7rH3aXXgLpMhD1ow75HRkuTMbg==", "email"=>"nestor.benavidez@gmail.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = 'nestor.benavidez@gmail.com' ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_sessions_controller.rb:11
+  Rendering user_sessions/new.html.erb within layouts/login
+  Rendered user_sessions/_form.html.erb (0.7ms)
+  Rendered user_sessions/new.html.erb within layouts/login (1.4ms)
+Completed 200 OK in 167ms (Views: 2.8ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "nestor.benavidez@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "crypted_password" = ?, "salt" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["crypted_password", "$2a$10$LV4i4.DPMcAl/SODxcozRe.92c/iXDxK5RPyBiBbX.2M2/W8MXsx2"], ["salt", "Ljoj7qFtiyHfSNMzx7PY"], ["updated_at", "2019-01-19 13:08:18.897015"], ["id", 1]]
+  [1m[35m (73.4ms)[0m  [1m[36mcommit transaction[0m
+Started POST "/user_sessions" for 127.0.0.1 at 2019-01-19 10:08:33 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BK7LpS6XuTn89PeNQdhslbgVRvthIHtil1VZCgcSobsb89Pny1i4dOalHIuCW+R92RwMBf0E1cYmapxpSGDU5g==", "email"=>"nestor.benavidez@gmail.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = 'nestor.benavidez@gmail.com' ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_sessions_controller.rb:11
+Redirected to http://localhost:3000/dashboard/index
+Completed 302 Found in 177ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2019-01-19 10:08:33 -0300
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2398ms (Views: 1176.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dashboard/activity.html" for 127.0.0.1 at 2019-01-19 10:08:40 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/dashboard/activity.html"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+rack (2.0.6) lib/rack/handler/webrick.rb:86:in `service'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+Started GET "/dashboard/index" for 127.0.0.1 at 2019-01-19 10:08:43 -0300
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 39ms (Views: 34.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dashboard/other-user-listing.html" for 127.0.0.1 at 2019-01-19 10:08:52 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/dashboard/other-user-listing.html"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+rack (2.0.6) lib/rack/handler/webrick.rb:86:in `service'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+Started GET "/dashboard/index" for 127.0.0.1 at 2019-01-19 10:08:55 -0300
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 85ms (Views: 72.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2019-01-19 10:09:18 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 224ms (Views: 68.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2019-01-19 10:09:27 -0300
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 112ms (Views: 101.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2019-01-19 10:09:36 -0300
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 52ms (Views: 47.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2019-01-19 10:09:41 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (25.7ms)
+  Rendered users/edit.html.erb within layouts/application (224.7ms)
+Completed 200 OK in 300ms (Views: 276.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/task.html" for 127.0.0.1 at 2019-01-19 10:19:49 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/task.html"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+rack (2.0.6) lib/rack/handler/webrick.rb:86:in `service'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+Started GET "/users/1/edit" for 127.0.0.1 at 2019-01-19 10:19:51 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (10.2ms)
+  Rendered users/edit.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 87ms (Views: 74.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2019-01-19 10:21:40 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (9.2ms)
+  Rendered users/edit.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 68ms (Views: 60.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2019-01-19 10:22:20 -0300
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 83ms (Views: 77.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2019-01-19 10:23:08 -0300
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 78ms (Views: 69.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/dashboard/other-login.html" for 127.0.0.1 at 2019-01-19 10:28:35 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/dashboard/other-login.html"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+rack (2.0.6) lib/rack/handler/webrick.rb:86:in `service'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+Started GET "/dashboard/index" for 127.0.0.1 at 2019-01-19 10:28:37 -0300
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 53ms (Views: 36.2ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+Migrating to CreateWeightDetails (20190119134417)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+Migrating to CreateWeightDetails (20190119134417)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+Migrating to CreateWeightDetails (20190119134417)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+Migrating to CreateWeightDetails (20190119134417)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190119134417_create_weight_details.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "weight_details" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "reception_point_id" integer, "reception_status_id" integer, "harvest" varchar, "client_id" integer, "reception_date" datetime, "type_of_vehicle_id" integer, "plate" varchar, "driver_id" integer, "remission_number" varchar, "procedence" varchar, "receipt" varchar, "waste_in_transit" varchar, "pledgee" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190119134417_create_weight_details.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_weight_details_on_reception_point_id" ON "weight_details" ("reception_point_id")[0m
+  ↳ db/migrate/20190119134417_create_weight_details.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_weight_details_on_reception_status_id" ON "weight_details" ("reception_status_id")[0m
+  ↳ db/migrate/20190119134417_create_weight_details.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_weight_details_on_client_id" ON "weight_details" ("client_id")[0m
+  ↳ db/migrate/20190119134417_create_weight_details.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_weight_details_on_type_of_vehicle_id" ON "weight_details" ("type_of_vehicle_id")[0m
+  ↳ db/migrate/20190119134417_create_weight_details.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_weight_details_on_driver_id" ON "weight_details" ("driver_id")[0m
+  ↳ db/migrate/20190119134417_create_weight_details.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190119134417"]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (791.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+Migrating to CreateClients (20190119135121)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+Migrating to CreateClients (20190119135121)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190119135121_create_clients.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "clients" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "client_group_id" integer, "ruc" varchar, "pais" varchar, "direccion_postal" varchar, "activation_date" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190119135121_create_clients.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_clients_on_client_group_id" ON "clients" ("client_group_id")[0m
+  ↳ db/migrate/20190119135121_create_clients.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190119135121"]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (520.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+Migrating to CreateProcedences (20190119135208)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "procedences" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "client_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190119135208_create_procedences.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_procedences_on_client_id" ON "procedences" ("client_id")[0m
+  ↳ db/migrate/20190119135208_create_procedences.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190119135208"]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (142.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+Migrating to CreateLots (20190119142750)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "lots" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "imperfection_id" integer, "damage_id" integer, "quality_id" integer, "variety_id" integer, "certification_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190119142750_create_lots.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_lots_on_imperfection_id" ON "lots" ("imperfection_id")[0m
+  ↳ db/migrate/20190119142750_create_lots.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE  INDEX "index_lots_on_damage_id" ON "lots" ("damage_id")[0m
+  ↳ db/migrate/20190119142750_create_lots.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_lots_on_quality_id" ON "lots" ("quality_id")[0m
+  ↳ db/migrate/20190119142750_create_lots.rb:3
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX "index_lots_on_variety_id" ON "lots" ("variety_id")[0m
+  ↳ db/migrate/20190119142750_create_lots.rb:3
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX "index_lots_on_certification_id" ON "lots" ("certification_id")[0m
+  ↳ db/migrate/20190119142750_create_lots.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190119142750"]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (92.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+Migrating to CreateQualities (20190119142818)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "qualities" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190119142818_create_qualities.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190119142818"]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (137.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+Migrating to CreateVarieties (20190119142838)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "varieties" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190119142838_create_varieties.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190119142838"]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (125.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+Migrating to CreateCertifications (20190119142856)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "certifications" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190119142856_create_certifications.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190119142856"]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (126.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+Migrating to CreateTypeOfVehicles (20190119142955)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "type_of_vehicles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190119142955_create_type_of_vehicles.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190119142955"]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (119.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+Migrating to CreateReceptionPoints (20190119143012)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "reception_points" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190119143012_create_reception_points.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190119143012"]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (173.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+Migrating to CreateReceptionStatuses (20190119143024)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "reception_statuses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190119143024_create_reception_statuses.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190119143024"]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (175.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+Migrating to CreateClientGroups (20190119143055)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "client_groups" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190119143055_create_client_groups.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190119143055"]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (178.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+Migrating to CreatePledgees (20190119143113)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "pledgees" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190119143113_create_pledgees.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190119143113"]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (183.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+Started POST "/logout" for 127.0.0.1 at 2019-01-19 13:07:21 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UserSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3/qNA4SXaTCbIRNc0v0Q+0bV4kznsxEJLb0XOmF48NGXPW6ZQp2Etq5cW45fvCYRAmRpGYsxNpdu9iauXqdH0Q=="}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/login
+Completed 302 Found in 40ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-01-19 13:07:21 -0300
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/login
+  Rendered user_sessions/_form.html.erb (2.3ms)
+  Rendered user_sessions/new.html.erb within layouts/login (31.9ms)
+Completed 200 OK in 135ms (Views: 68.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2019-01-19 13:07:22 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+rack (2.0.6) lib/rack/handler/webrick.rb:86:in `service'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+Started POST "/user_sessions" for 127.0.0.1 at 2019-01-19 13:22:56 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iK+N01Sjro7Tc0hQOq30ZfDD9D8yVih6IGd1LaGVvGOXVKZwOWKmkXXfpTmRjsHFFAQTOO5DLZEUGnCPH6xFnQ==", "email"=>"nestor.benavidez@gmail.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = 'nestor.benavidez@gmail.com' ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_sessions_controller.rb:11
+Redirected to http://localhost:3000/dashboard/index
+Completed 302 Found in 198ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2019-01-19 13:22:57 -0300
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 1594ms (Views: 1520.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2019-01-19 13:23:19 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 312ms (Views: 110.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2019-01-19 13:23:44 -0300
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 97ms (Views: 83.3ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/lots" for 127.0.0.1 at 2019-01-19 13:23:52 -0300
+Processing by LotsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering lots/index.html.erb within layouts/application
+  [1m[36mLot Load (15.1ms)[0m  [1m[34mSELECT "lots".* FROM "lots"[0m
+  ↳ app/views/lots/index.html.erb:19
+  Rendered lots/index.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 592ms (Views: 80.7ms | ActiveRecord: 16.5ms)
+
+
+Started GET "/lots/new" for 127.0.0.1 at 2019-01-19 13:23:56 -0300
+Processing by LotsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering lots/new.html.erb within layouts/application
+  Rendered lots/_form.html.erb (113.3ms)
+  Rendered lots/new.html.erb within layouts/application (116.3ms)
+Completed 200 OK in 223ms (Views: 179.2ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/damages" for 127.0.0.1 at 2019-01-19 13:24:38 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/damages"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+rack (2.0.6) lib/rack/handler/webrick.rb:86:in `service'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+Started GET "/" for 127.0.0.1 at 2019-01-19 13:27:25 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.2) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+rack (2.0.6) lib/rack/handler/webrick.rb:86:in `service'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+Migrating to CreateDamages (20190119162552)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190119162552_create_damages.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "damages" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190119162552_create_damages.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190119162552"]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (181.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/bin/rake:23
+Started GET "/" for 127.0.0.1 at 2019-01-19 13:28:02 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nestor/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/login
+  Rendered user_sessions/_form.html.erb (1.0ms)
+  Rendered user_sessions/new.html.erb within layouts/login (2.1ms)
+Completed 200 OK in 21ms (Views: 4.5ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2019-01-19 13:28:13 -0300
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aXT/0NECNV1tAVvH3Po5mdecBGSU9YT8qlUS2aLDN7x2j9RzvMM9Qsuttq532Qw5M1vjY0jggReeKBd7HPrOQg==", "email"=>"nestor.benavidez@gmail.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = 'nestor.benavidez@gmail.com' ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/user_sessions_controller.rb:11
+Redirected to http://localhost:3000/dashboard/index
+Completed 302 Found in 197ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/dashboard/index" for 127.0.0.1 at 2019-01-19 13:28:13 -0300
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 341ms (Views: 337.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/damages" for 127.0.0.1 at 2019-01-19 13:29:17 -0300
+Processing by DamagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering damages/index.html.erb within layouts/application
+  [1m[36mDamage Load (0.2ms)[0m  [1m[34mSELECT "damages".* FROM "damages"[0m
+  ↳ app/views/damages/index.html.erb:14
+  Rendered damages/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 54ms (Views: 49.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/varieties" for 127.0.0.1 at 2019-01-19 13:29:32 -0300
+Processing by VarietiesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering varieties/index.html.erb within layouts/application
+  [1m[36mVariety Load (0.5ms)[0m  [1m[34mSELECT "varieties".* FROM "varieties"[0m
+  ↳ app/views/varieties/index.html.erb:14
+  Rendered varieties/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 1034ms (Views: 119.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/varieties/new" for 127.0.0.1 at 2019-01-19 13:29:38 -0300
+Processing by VarietiesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering varieties/new.html.erb within layouts/application
+  Rendered varieties/_form.html.erb (23.8ms)
+  Rendered varieties/new.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 128ms (Views: 97.4ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/varieties" for 127.0.0.1 at 2019-01-19 13:29:43 -0300
+Processing by VarietiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HLY8ZtyYv3zTTZLuu7IAyFtR8HKwKBG1aqFMzrj9OBf6Q7IX3IrGv5TEAuuWKt9GlUU9xM5Tv107SdEcsaokaQ==", "variety"=>{"name"=>"adfasdfsdf"}, "commit"=>"Create Variety"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/varieties_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/varieties_controller.rb:30
+  Rendering varieties/new.html.erb within layouts/application
+  Rendered varieties/_form.html.erb (3.7ms)
+  Rendered varieties/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 97ms (Views: 55.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/lot" for 127.0.0.1 at 2019-01-19 13:30:15 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/lot"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+rack (2.0.6) lib/rack/handler/webrick.rb:86:in `service'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+/home/nestor/.rbenv/versions/2.5.0/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+Started GET "/lots" for 127.0.0.1 at 2019-01-19 13:30:19 -0300
+Processing by LotsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering lots/index.html.erb within layouts/application
+  [1m[36mLot Load (0.2ms)[0m  [1m[34mSELECT "lots".* FROM "lots"[0m
+  ↳ app/views/lots/index.html.erb:19
+  Rendered lots/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 69ms (Views: 61.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/lots/new" for 127.0.0.1 at 2019-01-19 13:30:21 -0300
+Processing by LotsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering lots/new.html.erb within layouts/application
+  Rendered lots/_form.html.erb (14.5ms)
+  Rendered lots/new.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 92ms (Views: 66.4ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/lots" for 127.0.0.1 at 2019-01-19 13:30:31 -0300
+Processing by LotsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4he2m1C+skTPXiGIw+CsXjX9PUTQmAQsJag1BlRmantzTjjARGXZFlZ2CBdVlcl7WWfd+r/WZeokgDo1MCFXvA==", "lot"=>{"name"=>"11300", "imperfection"=>"asdf", "damage"=>"asdfa", "quality"=>"asdf", "variety"=>"asdfas", "certification"=>"asdfa"}, "commit"=>"Create Lot"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/nestor/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'imperfection' for Lot.):
+  
+app/controllers/lots_controller.rb:27:in `create'

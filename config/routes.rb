@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+  resources :damages
+  resources :pledgees
+  resources :client_groups
+  resources :reception_statuses
+  resources :reception_points
+  resources :type_of_vehicles
+  resources :certifications
+  resources :varieties
+  resources :qualities
+  resources :lots
+  resources :procedences
+  resources :clients
+  resources :weight_details
   get 'user_sessions/new'
   get 'user_sessions/create'
   get 'user_sessions/destroy'

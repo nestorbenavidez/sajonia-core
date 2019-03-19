@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @lot.name %>
+</p>
+
+<p>
+  <strong>Imperfection:</strong>
+  <%= @lot.imperfection %>
+</p>
+
+<p>
+  <strong>Damage:</strong>
+  <%= @lot.damage %>
+</p>
+
+<p>
+  <strong>Quality:</strong>
+  <%= @lot.quality %>
+</p>
+
+<p>
+  <strong>Variety:</strong>
+  <%= @lot.variety %>
+</p>
+
+<p>
+  <strong>Certification:</strong>
+  <%= @lot.certification %>
+</p>
+
+<%= link_to 'Edit', edit_lot_path(@lot) %> |
+<%= link_to 'Back', lots_path %>

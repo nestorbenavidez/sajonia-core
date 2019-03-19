@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Reception Points</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reception_points.each do |reception_point| %>
+      <tr>
+        <td><%= reception_point.name %></td>
+        <td><%= link_to 'Show', reception_point %></td>
+        <td><%= link_to 'Edit', edit_reception_point_path(reception_point) %></td>
+        <td><%= link_to 'Destroy', reception_point, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Reception Point', new_reception_point_path %>

@@ -1,0 +1,82 @@
+<%= form_with(model: weight_detail, local: true) do |form| %>
+  <% if weight_detail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(weight_detail.errors.count, "error") %> prohibited this weight_detail from being saved:</h2>
+
+      <ul>
+      <% weight_detail.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :reception_point %>
+    <%= form.text_field :reception_point %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reception_status %>
+    <%= form.text_field :reception_status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :harvest %>
+    <%= form.text_field :harvest %>
+  </div>
+
+  <div class="field">
+    <%= form.label :client %>
+    <%= form.text_field :client %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reception_date %>
+    <%= form.text_field :reception_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :type_of_vehicle %>
+    <%= form.text_field :type_of_vehicle %>
+  </div>
+
+  <div class="field">
+    <%= form.label :plate %>
+    <%= form.text_field :plate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :driver %>
+    <%= form.text_field :driver %>
+  </div>
+
+  <div class="field">
+    <%= form.label :remission_number %>
+    <%= form.text_field :remission_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :procedence %>
+    <%= form.text_field :procedence %>
+  </div>
+
+  <div class="field">
+    <%= form.label :receipt %>
+    <%= form.text_field :receipt %>
+  </div>
+
+  <div class="field">
+    <%= form.label :waste_in_transit %>
+    <%= form.text_field :waste_in_transit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pledgee %>
+    <%= form.text_field :pledgee %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
